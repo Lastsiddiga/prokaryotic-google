@@ -1,24 +1,107 @@
-.item-a {
-    grid-area: header;
-    align-items: center;
-  }
-  .item-b {
-    grid-area: search;
-  }
-  .item-c {
-    grid-area: ops;
-  }
-  .item-d {
-    grid-area: footer;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: 50px 50px 50px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header header header header"
-      "search search search search"
-      "ops ops ops ops"
-      "footer footer footer footer";
-  }
+.container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 1.1fr;
+  grid-template-rows: 2.1fr 0.7fr 0.9fr 0.3fr;
+  gap: 1px 1px;
+  grid-auto-flow: row dense;
+  align-items: center;
+  grid-template-areas:
+    "google google google"
+    "search search search"
+    "link1 link2 link3"
+    "footer footer footer";
+}
+
+.google {
+  justify-self: center;
+  align-self: end;
+  grid-area: google;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". SEARCH1 ."
+    ". SEARCH1 ."
+    ". SEARCH1 .";
+  justify-self: stretch;
+  align-self: center;
+  grid-area: search;
+  background-color: rgb(213, 204, 204);
+}
+
+.SEARCH1 {
+  justify-self: center;
+  align-self: center;
+  grid-area: SEARCH1;
+}
+
+.link1 {
+  display: grid;
+  grid-template-columns: 0.6fr 1.8fr 0.6fr;
+  grid-template-rows: 0.6fr 1.8fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". l1 ."
+    ". . .";
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: link1;
+  background-color: rgb(102, 164, 200);
+}
+
+.l1 {
+  grid-area: l1;
+}
+
+.link3 {
+  display: grid;
+  grid-template-columns: 0.6fr 1.8fr 0.6fr;
+  grid-template-rows: 0.6fr 1.8fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". l3 ."
+    ". . .";
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: link3;
+  background-color: rgb(102, 164, 200);
+}
+
+.l3 {
+  grid-area: l3;
+}
+
+.footer {
+  justify-self: center;
+  align-self: center;
+  grid-area: footer;
+}
+
+.link2 {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". l2 ."
+    ". . .";
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: link2;
+  background-color: rgb(102, 164, 200);
+}
+
+.l2 {
+  grid-area: l2;
+}
