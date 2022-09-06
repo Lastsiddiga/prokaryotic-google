@@ -1,2 +1,2 @@
 # prokaryotic-google
-primitive state of google
+primitive version of google
